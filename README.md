@@ -5,7 +5,7 @@
 
 2.[Prometheus Install](prometheus_install)
 
-
+5.[shell使用技巧](bash)
 
 ## Other github scripts project
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts/)
