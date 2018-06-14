@@ -5,3 +5,7 @@
 
 2.[Prometheus Install](prometheus_install)
 
+
+
+## Other github scripts project
+[hacker-scripts](https://github.com/NARKOZ/hacker-scripts/)
