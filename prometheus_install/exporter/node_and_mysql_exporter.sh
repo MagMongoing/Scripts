@@ -57,6 +57,6 @@ GRANT SELECT ON performance_schema.* TO ''@'127.0.0.1';
 EOF
 
 
-#systemctl start node_exporter
-#systemctl start mysqld_exporter
+systemctl start node_exporter
+systemctl start mysqld_exporter
 
