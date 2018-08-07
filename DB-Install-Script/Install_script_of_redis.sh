@@ -156,6 +156,7 @@ if [ -d $EX_DIR ]
 				chown -R redis.redis $DIR
 				LOGFILE=$LOGDIR/redis_"$n".log
 				PIDFILE=$PIDDIR/"$n".pid
+                SOCKET=$PIDDIR/redis_"$n".sock
 
 				init_config_file
 			done
