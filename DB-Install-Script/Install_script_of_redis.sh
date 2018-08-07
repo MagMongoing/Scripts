@@ -85,6 +85,8 @@ client-output-buffer-limit slave 256mb 64mb 60
 client-output-buffer-limit pubsub 32mb 8mb 60
 hz 10
 aof-rewrite-incremental-fsync yes
+unixsocket /tmp/redis.sock
+unixsocketperm 700
 EOF
 SERVER=`which redis-server`
 su redis -c "$SERVER $CONFIG_DIR/'"$PORT"'.conf"
