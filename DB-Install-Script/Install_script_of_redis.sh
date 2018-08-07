@@ -85,7 +85,7 @@ client-output-buffer-limit slave 256mb 64mb 60
 client-output-buffer-limit pubsub 32mb 8mb 60
 hz 10
 aof-rewrite-incremental-fsync yes
-unixsocket /tmp/redis.sock
+unixsocket $SOCKET
 unixsocketperm 700
 EOF
 SERVER=`which redis-server`
@@ -129,6 +129,7 @@ if [ -d $EX_DIR ]
 				LOGFILE=$LOGDIR/redis_"$n".log
 				PIDDIR=$DATADIR/run
 				PIDFILE=$PIDDIR/"$n".pid
+                SOCKET=$PIDDIR/redis_"$n".sock
 				
 			        init_config_file	
 			done
