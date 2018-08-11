@@ -5,6 +5,8 @@
 
 2.[Prometheus Install](prometheus_install)
 
+4.[RabbitMQ相关脚本](rabbitmq)
+
 5.[shell使用技巧](bash)
 
 ## Other github scripts project
