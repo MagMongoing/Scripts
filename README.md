@@ -9,5 +9,7 @@
 
 5.[shell使用技巧](bash)
 
+6.[archer + inception上线审核钉钉通知脚本](archer_dingding)
+
 ## Other github scripts project
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts/)
