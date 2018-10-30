@@ -38,6 +38,7 @@ socket = /tmp/mysql.sock
 #time
 explicit_defaults_for_timestamp = true
 log_timestamps = SYSTEM
+default-time-zone = "Asia/Shanghai"
 
 basedir = $BASEDIR
 datadir = $DATADIR
@@ -134,6 +135,7 @@ socket = $sock
 
 explicit_defaults_for_timestamp = true
 log_timestamps = SYSTEM
+default-time-zone = "Asia/Shanghai"
 
 basedir = $BASEDIR
 datadir = $DATADIR
