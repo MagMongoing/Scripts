@@ -1,6 +1,6 @@
 minion_install:
   cmd.run:
-    - name: curl -L https://bootstrap.saltstack.com -o install_salt.sh &&  sh install_salt.sh -P -M
+    - name: curl -L https://bootstrap.saltstack.com -o install_salt.sh &&  sh install_salt.sh -P
     - unless: rpm -qa|grep salt-minion
 minion_conf:
   file.managed:
