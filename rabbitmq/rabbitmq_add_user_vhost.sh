@@ -4,8 +4,8 @@ yum install expect* -y >/dev/null
 read -p "user: " USER
 read -p "vhost: " vhost
 VHOST="$vhost"
-DEV_HOST="192.168.0.1:5672"
-PROD_HOST="192.168.0.1:5672"
+DEV_HOST="192.168.0.5:5672"
+PROD_HOST="192.168.0.5:5672"
 PASSWORD=`mkpasswd -l 12 -d 3 -c 5 -C 4 -s 0`
 
 if [ ${USER:0:4} == 'test' ]
