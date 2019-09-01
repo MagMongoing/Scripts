@@ -11,5 +11,7 @@
 
 6.[archer + inception上线审核钉钉通知脚本](archer_dingding)
 
+7.[jumpserver同步阿里云ECS](aliyun_ecs_to_jumpserver)
+
 ## Other github scripts project
 [hacker-scripts](https://github.com/NARKOZ/hacker-scripts/)
