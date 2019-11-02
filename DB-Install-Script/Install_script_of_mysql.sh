@@ -2,14 +2,13 @@
 
 function init_env()
 {
-    yum -y install libaio
+    yum -y install libaio numactl.x86_64
     groupadd mysql
     useradd -s /bin/false -r -g mysql  mysql
     cd /usr/local/src
     wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-$DB_VERSION-linux-glibc2.12-x86_64.tar.gz
     tar -xzf mysql-$DB_VERSION-linux-glibc2.12-x86_64.tar.gz -C ../
     cd /usr/local/
-#	mv  mysql-5.7.20-linux-glibc2.12-x86_64  mysql-5.7.20
     chown -R mysql.mysql /usr/local/mysql-$DB_VERSION-linux-glibc2.12-x86_64 
     ln -s /usr/local/mysql-$DB_VERSION-linux-glibc2.12-x86_64 /usr/local/mysql
     echo 'PATH=$PATH:/usr/local/mysql/bin'>>/etc/profile
@@ -38,7 +37,7 @@ socket = /tmp/mysql.sock
 #time
 explicit_defaults_for_timestamp = true
 log_timestamps = SYSTEM
-default-time-zone = "Asia/Shanghai"
+#default-time-zone = "Asia/Shanghai"
 
 basedir = $BASEDIR
 datadir = $DATADIR
@@ -135,7 +134,7 @@ socket = $sock
 
 explicit_defaults_for_timestamp = true
 log_timestamps = SYSTEM
-default-time-zone = "Asia/Shanghai"
+#default-time-zone = "Asia/Shanghai"
 
 basedir = $BASEDIR
 datadir = $DATADIR
