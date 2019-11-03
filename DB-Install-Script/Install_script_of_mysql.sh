@@ -85,9 +85,6 @@ relay_log = $DATADIR/mysql-relay-bin
 relay_log_recovery = 1
 relay_log_info_repository = table
 master_info_repository = table
-replicate_wild_ignore_table = mysql.%
-replicate_wild_ignore_table = information_schema.%
-replicate_wild_ignore_table = performance_schema.%
 
 # GTID
 gtid_mode = on
@@ -181,10 +178,6 @@ relay_log_info_repository = table
 master_info_repository = table
 relay_log = $DATADIR/mysql-relay-bin
 relay_log_recovery = 1
-replicate_wild_ignore_table = mysql.%
-replicate_wild_ignore_table = information_schema.%
-replicate_wild_ignore_table = test.%
-replicate_wild_ignore_table = sys.%
 
 # GTID
 gtid_mode=on
@@ -285,6 +278,8 @@ if [ $N -eq 1 ]
                 echo $PASS
                 read -s -p "PASS: " NEW_PASS
                 $BASEDIR/bin/mysql -uroot -p$PASS -S /tmp/mysql$p.sock --connect-expired-password -e "alter user root@localhost identified by '$NEW_PASS';"
+                sleep 5s
+                echo ""
             done
 fi
 

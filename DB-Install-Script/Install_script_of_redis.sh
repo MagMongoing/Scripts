@@ -64,7 +64,7 @@ appendonly yes
 appendfilename "appendonly.aof"
 appendfsync everysec
 no-appendfsync-on-rewrite no
-auto-aof-rewrite-min-size 64mb
+auto-aof-rewrite-min-size 256mb
 aof-load-truncated yes
 lua-time-limit 5000
 slowlog-log-slower-than 10000
