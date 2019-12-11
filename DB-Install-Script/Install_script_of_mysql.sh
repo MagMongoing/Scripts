@@ -85,6 +85,7 @@ relay_log = $DATADIR/mysql-relay-bin
 relay_log_recovery = 1
 relay_log_info_repository = table
 master_info_repository = table
+slave_preserve_commit_order = 1
 
 # GTID
 gtid_mode = on
@@ -178,6 +179,7 @@ relay_log_info_repository = table
 master_info_repository = table
 relay_log = $DATADIR/mysql-relay-bin
 relay_log_recovery = 1
+slave_preserve_commit_order = 1
 
 # GTID
 gtid_mode=on
