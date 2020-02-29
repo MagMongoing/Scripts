@@ -29,6 +29,7 @@ socket = /tmp/mysql.sock
 
 [mysql]
 default-character-set = utf8mb4
+prompt = '(\\\\U) [\\\\d]> '
 
 [mysqld]
 port = 3341
@@ -67,7 +68,7 @@ character-set-server = utf8mb4
 default-storage-engine = InnoDB
 
 # safety
-symbolic-links = 0
+symbolic-links = 0                      # 8.0 default 0
 tmpdir = $TMPDIR
 secure_file_priv = $TMPDIR
 
@@ -107,7 +108,7 @@ innodb_log_files_in_group = 2
 innodb_max_dirty_pages_pct = 50
 innodb_file_per_table = 1
 #innodb_file_format = Barracuda
-innodb_locks_unsafe_for_binlog = 0
+innodb_locks_unsafe_for_binlog = 0              # 8.0 remove
 innodb_stats_include_delete_marked = 1
 
 #timeout
@@ -162,7 +163,7 @@ character-set-server = utf8mb4
 default-storage-engine = InnoDB
 
 # safety
-symbolic-links = 0
+symbolic-links = 0     # 8.0 default 0
 tmpdir = /data/tmp
 secure_file_priv = /data/tmp
 
@@ -199,7 +200,7 @@ innodb_log_files_in_group = 2
 innodb_max_dirty_pages_pct = 50
 innodb_file_per_table = 1
 #innodb_file_format = Barracuda
-innodb_locks_unsafe_for_binlog = 0
+innodb_locks_unsafe_for_binlog = 0     # 8.0 remove
 
 innodb_stats_include_delete_marked = 1
 
@@ -225,6 +226,10 @@ max_allowed_packet = 32M
 mysqld = $BASEDIR/bin/mysqld_safe
 mysqladmin = $BASEDIR/bin/mysqladmin
 log = /data/mysql/mysqld_multi.log
+
+[mysql]
+default-character-set = utf8mb4
+prompt = '(\\\\U) [\\\\d]> '
 EOF
 }
 
