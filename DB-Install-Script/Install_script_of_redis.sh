@@ -87,6 +87,13 @@ hz 10
 aof-rewrite-incremental-fsync yes
 unixsocket $SOCKET
 unixsocketperm 700
+rename-command FLUSHALL "mFLUSHALL"
+rename-command FLUSHDB  "mFLUSHDB"
+rename-command CONFIG   "mCONFIG"
+rename-command KEYS     "mKEYS"
+rename-command SHUTDOWN "mSHUTDOWN"
+rename-command DEL "mDEL"
+rename-command EVAL "mEVAL"
 EOF
 SERVER=`which redis-server`
 su redis -c "$SERVER $CONFIG_DIR/'"$PORT"'.conf"
